@@ -24,6 +24,10 @@ public class GUIHandler : MonoBehaviour {
     {
         SceneManager.LoadScene(sceneId, LoadSceneMode.Single);
     }
+    static public void QualityChanger(float value)
+    {
+        QualitySettings.SetQualityLevel(Convert.ToInt32(value), false);
+    }
     public static void ScaleChange(float value)
     {
         EventHandler.scale *= value;

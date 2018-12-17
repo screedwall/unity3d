@@ -13,13 +13,16 @@ public class GUISettings : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Back.onClick.AddListener(() => GUIHandler.SceneSwitcher(0));
-        Quality.onValueChanged.AddListener(QualityChanger);
+        Volume.onValueChanged.AddListener(VolumeChanger);
+        Quality.onValueChanged.AddListener(GUIHandler.QualityChanger);
         Scale.onValueChanged.AddListener(GUIHandler.ScaleChange);
 	}
-	
-	// Update is called once per frame
-    public void QualityChanger(float value)
+
+    public void VolumeChanger(float value)
     {
-        QualitySettings.SetQualityLevel(Convert.ToInt32(value), false);
+        Volume.GetComponent<AudioSource>().volume = value;
     }
+	// Update is called once per frame
+    
+    
 }
