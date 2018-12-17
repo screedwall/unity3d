@@ -20,8 +20,8 @@ public class EventHandler : MonoBehaviour {
 
 
 	void Start () {
-        Grid.CreateMainGrid(Player1, 1);
-        Grid.CreateMainGrid(Player2, 2);
+        CreateMainGrid(Player1, 1);
+        //CreateMainGrid(Player2, 2);
 
         CreateShips();
        
@@ -37,6 +37,26 @@ public class EventHandler : MonoBehaviour {
         game.GetComponent<Transform>().localScale = new Vector3(1f * scale, 1f * scale, 1f * scale);
         game.transform.position = new Vector3(0f, 0f, -5f);
 	}
+
+    public void CreateMainGrid(Transform parent, int player)
+    {
+        float positionX = 0;
+        float positionZ = 0;
+        for (int i = 0; i < GridSize; i++)
+        {
+            for (int j = 0; j < GridSize; j++)
+            {
+                positionX += 5.3f;
+                GameObject plane = Instantiate(prefab, parent).gameObject;
+                plane.name = string.Format("Cell[{0},{1}]", i, j);
+
+                plane.GetComponent<CellController>().id = i * GridSize + j;
+                plane.transform.position = new Vector3(positionX, 0, positionZ);
+            }
+            positionX = 0;
+            positionZ += 5.3f;
+        }
+    }
 
     private void CreateShips()
     {

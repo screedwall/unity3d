@@ -59,6 +59,13 @@
      <Compile Include="Assets\Grid.cs" />
      <Compile Include="Assets\NetworkManagerCustom.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+     <Compile Include="Assets\SeaBattle\Scripts\GameManager.cs" />
+     <Compile Include="Assets\SeaBattle\Scripts\GridHolderManager.cs" />
+     <Compile Include="Assets\SeaBattle\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\SeaBattle\Scripts\Utils\Messages\ClickMessage.cs" />
+     <Compile Include="Assets\SeaBattle\Scripts\Utils\Messages\GridCreationMessage.cs" />
+     <Compile Include="Assets\SeaBattle\Scripts\Utils\Messenger.cs" />
+     <Compile Include="Assets\SeaBattle\Scripts\ValuesHolder.cs" />
      <Compile Include="Assets\ShipHandler.cs" />
      <Compile Include="Assets\SOMETHING.cs" />
      <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
