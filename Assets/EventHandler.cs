@@ -6,22 +6,22 @@ using UnityEngine.UI;
 public class EventHandler : MonoBehaviour {
     public GameObject panel;
     public Transform ship;
-    public GameObject prefab;
+    public Transform prefab;
     public Transform[] cells;
     public GameObject Cam;
     public GameObject VuforiaCam;
     public Transform Player1;
     public Transform Player2;
-    static public float scale = 0.2f;
+    static public float scale = 0.1f;
     static int k = 20; //ships count
 
     [Tooltip("Размер поля")]
     public int GridSize;
-
+    
 
 	void Start () {
-        Grid.CreateMainGrid(Player1, 1);
-        Grid.CreateMainGrid(Player2, 2);
+        Grid.CreateMainGrid(prefab, Player1, 1);
+        Grid.CreateMainGrid(prefab, Player2, 2);
 
         CreateShips();
        
