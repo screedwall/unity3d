@@ -57,9 +57,6 @@
      <Compile Include="Assets\Drag.cs" />
      <Compile Include="Assets\EventHandler.cs" />
      <Compile Include="Assets\Grid.cs" />
-     <Compile Include="Assets\GUIGame.cs" />
-     <Compile Include="Assets\GUIHandler.cs" />
-     <Compile Include="Assets\GUISettings.cs" />
      <Compile Include="Assets\NetworkManagerCustom.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\ShipHandler.cs" />
